@@ -1,4 +1,4 @@
-.brush{
+.brush,.stampBrush{
 	width: 100px;
 	height: 100px;
 	background-color: #ccc;
@@ -7,4 +7,8 @@
 	width: 20px;
 	height: 20px;
 	background-color: blue;
+}
+img{
+	width: 20px;
+	height: 20px;
 }

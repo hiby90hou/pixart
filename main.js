@@ -1,3 +1,4 @@
+
 console.log('work');
 
 function changeColor(){
@@ -27,3 +28,24 @@ for(var i = 0; i < 100; i++ ){
 	})
 	document.querySelector('body').append(newDiv);
 }
+
+function changePicture(){
+	var movieName = document.querySelector('#getMovieName')
+	console.log(movieName.value);
+	var newImg = document.createElement('img')
+
+	$.ajax(options(movieName)).done(function(response){
+		console.log(response)
+		var $newImg = $('<img>')
+		$newImg.attr("src", response["Poster"]);
+
+		$('.stampBrush').append($newImg)
+		event.preventDefault();
+	})
+}
+
+function options(search){
+  return {url: 'http://www.omdbapi.com/?apikey=2f6435d9&t='+ search}
+}
+
+document.querySelector('.stampBrush').addEventListener("mouseover",changePicture)
