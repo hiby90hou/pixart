@@ -21,7 +21,8 @@ for(var i = 0; i < 100; i++ ){
 	var newDiv = document.createElement('div')
 	newDiv.classList.add("square");
 	newDiv.addEventListener("click",function(event){
-		event.target.style.backgroundColor = "green";
+
+		event.target.style.backgroundColor = document.querySelector('#getColorName').value;
 	})
 	document.querySelector('body').append(newDiv);
 }
