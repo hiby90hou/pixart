@@ -1,13 +1,13 @@
 console.log('work');
 
 function changeColor(){
-	colorName = document.querySelector('#getColorName')
+	var colorName = document.querySelector('#getColorName')
 	console.log(colorName.value);
 	document.querySelector('.brush').style.backgroundColor = colorName.value;
 	event.preventDefault();
 }
 
-setColorButton = document.querySelector('#setColorButton')
+var setColorButton = document.querySelector('#setColorButton')
 setColorButton.addEventListener("click",changeColor)
 
 document.querySelector('#getColorName').addEventListener("keydown",function(){
@@ -16,3 +16,9 @@ document.querySelector('#getColorName').addEventListener("keydown",function(){
 		changeColor();
 	}
 })
+
+for(var i = 0; i < 100; i++ ){
+	var newDiv = document.createElement('div')
+	newDiv.classList.add("square");
+	document.querySelector('body').append(newDiv);
+}
