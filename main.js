@@ -8,7 +8,8 @@ function changeColor(){
 }
 
 var setColorButton = document.querySelector('#setColorButton')
-setColorButton.addEventListener("click",changeColor)
+// setColorButton.addEventListener("click",changeColor)
+document.querySelector('.brush').addEventListener("mouseover",changeColor)
 
 document.querySelector('#getColorName').addEventListener("keydown",function(){
 	if(13 == event.keyCode){
