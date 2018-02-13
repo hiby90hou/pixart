@@ -30,9 +30,8 @@ for(var i = 0; i < 100; i++ ){
 }
 
 function changePicture(){
-	var movieName = document.querySelector('#getMovieName')
+	var movieName = document.querySelector('#getMovieName').value
 	console.log(movieName.value);
-	var newImg = document.createElement('img')
 
 	$.ajax(options(movieName)).done(function(response){
 		console.log(response)
